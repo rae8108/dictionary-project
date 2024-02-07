@@ -11,3 +11,8 @@
 .App footer {
   margin-top: 10px;
 }
+
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
