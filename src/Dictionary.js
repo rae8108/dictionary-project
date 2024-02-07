@@ -24,12 +24,9 @@ export default function Dictionary() {
 
     let pexelsApiKey =
       "MeMlcwgzsrSPVkTZNRTCglNnnCuhoVgSw4eV6w2Ar7QDI7sv6f7gh16d";
-    let pexelsApiUrl = ` https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
-    axios
-      .get(pexelsApiUrl, {
-        headers: { Authorization: `Bearer ${pexelsApiKey}` },
-      })
-      .then(handlePexelsResponse);
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    let headers = { Authorization: `${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
   function handleKeywordChange(event) {
